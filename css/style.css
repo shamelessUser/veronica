@@ -15,7 +15,7 @@ h2 {
   font-family: "Oswald-Regular", sans-serif;
 }
 
-.headline p {
+.headline a {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -25,13 +25,14 @@ h2 {
   font-size: 14px;
   color: #FFFFFF;
   background: #7F56D9;
-  cursor: pointer;
+  text-decoration: none;
 }
 
 .container {
   max-width: 1440px;
   padding: 0 32px;
   margin: 0 auto;
+  overflow: hidden;
 }
 
 nav {
@@ -168,6 +169,7 @@ header .header .header__right img:nth-child(2) {
   }
   header .header .header__left p {
     padding-top: 20px;
+    line-height: unset;
   }
   header .header .header__right {
     padding-top: 30px;
@@ -182,6 +184,205 @@ header .header .header__right img:nth-child(2) {
     width: 100%;
   }
   header .header .header__left h1 {
+    line-height: unset;
+  }
+}
+
+main .project__section h2 {
+  font-size: min(44px, max(27px + 2vw));
+  font-weight: 400;
+  line-height: 60px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin: 195px 0px 41px 0px;
+  color: #101828;
+}
+main .project__section .project__about {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main .project__section .project__about p {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 28px;
+  color: #667085;
+  margin: 0px;
+}
+main .project__section .project__about a {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #FFFFFF;
+  background: #7F56D9;
+  text-decoration: none;
+  padding: 0 20px;
+}
+main .project__section .project__first {
+  position: relative;
+}
+main .project__section .project__first .project__first__headline {
+  width: 1376px;
+  height: 17px;
+  background: #1C1C1C;
+  margin-top: 62px;
+}
+main .project__section .project__first .project__first__year {
+  position: absolute;
+  left: 1281px;
+  bottom: 88px;
+  color: #FFFFFF;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+}
+main .project__section .project__first img {
+  display: block;
+}
+main .project__section .project__second {
+  position: relative;
+}
+main .project__section .project__second .project__second__headline {
+  width: 1376px;
+  height: 49px;
+  background: #EDE6D4;
+  margin-top: 24px;
+}
+main .project__section .project__second .project__second__year {
+  position: absolute;
+  left: 1284px;
+  bottom: 48px;
+  color: #FFFFFF;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+}
+main .project__section .project__second img {
+  display: block;
+}
+@media screen and (max-width: 1425px) {
+  main .project__section .project__first img, main .project__section .project__second img {
+    width: 100%;
+  }
+  main .project__section .project__first .project__first__headline, main .project__section .project__first .project__second__headline, main .project__section .project__second .project__first__headline, main .project__section .project__second .project__second__headline {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 1252px) {
+  main .project__section h2 {
+    text-align: center;
+    margin: 30px 0px 10px 0px;
+  }
+  main .project__section .project__about {
+    justify-content: unset;
+    flex-direction: column;
+  }
+  main .project__section .project__about P {
+    margin-bottom: 20px;
+    text-align: center;
+    line-height: unset;
+  }
+  main .project__section .project__first .project__first__headline {
+    margin-top: 30px;
+  }
+}
+@media screen and (max-width: 340px) {
+  main .project__section h2 {
+    line-height: unset;
+  }
+}
+main .about__section h2 {
+  font-weight: 400;
+  font-size: min(60px, max(33px + 2vw));
+  line-height: 72px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-top: 191px;
+  margin-bottom: 105px;
+}
+main .about__section .about__content {
+  display: flex;
+  flex-direction: column;
+}
+main .about__section .about__content .about__pics {
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+}
+main .about__section .about__content .about__pics img {
+  display: block;
+}
+main .about__section .about__content .about__pics img:nth-child(2) {
+  position: absolute;
+  bottom: 48px;
+  right: 678px;
+}
+main .about__section .about__content .about__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-left: 336px;
+}
+main .about__section .about__content .about__text p {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+  color: #667085;
+}
+main .about__section .about__content .about__text p:nth-child(1) {
+  margin: 131px 0px 30px 0px;
+}
+main .about__section .about__content .about__text p:nth-child(2) {
+  margin: 0px;
+}
+main .about__section .about__content .about__text a {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  text-decoration: none;
+  color: #FFFFFF;
+  background: #7F56D9;
+  padding: 10px 34px 9px 34px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-top: 73px;
+}
+@media screen and (max-width: 1252px) {
+  main .about__section h2 {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 25px;
+  }
+  main .about__section .about__content .about__pics {
+    justify-content: center;
+  }
+  main .about__section .about__content .about__pics img:nth-child(2) {
+    display: none;
+  }
+  main .about__section .about__content .about__text {
+    justify-content: center;
+    align-items: center;
+    margin: 0px auto;
+  }
+  main .about__section .about__content .about__text p {
+    text-align: center;
+  }
+  main .about__section .about__content .about__text p:nth-child(1) {
+    margin: 30px 0px 15px 0px;
+  }
+  main .about__section .about__content .about__text a {
+    margin-top: 15px;
+  }
+}
+@media screen and (max-width: 864px) {
+  main .about__section h2 {
+    line-height: unset;
+  }
+  main .about__section .about__content .about__pics img {
+    width: 100%;
+  }
+  main .about__section .about__content .about__text p {
     line-height: unset;
   }
 }
@@ -202,6 +403,9 @@ ul {
   padding: 0;
 }
 
+/* p {
+  margin: 0px;
+} */
 html {
   line-height: 1.15; /* 1 */
   -webkit-text-size-adjust: 100%; /* 2 */

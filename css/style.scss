@@ -10,6 +10,7 @@ $primary: #7F56D9;
 $firstBgWhite: #F9FAFB;
 $secondBgdWhite: #F2F4F7;
 
+$laptop: 1252px;
 $tablet: 1024px;
 $mobileL: 768px;
 $mobileM: 580px;
@@ -35,7 +36,7 @@ h2 {
 }
 
 .headline {
-  p {
+  a {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -45,7 +46,7 @@ h2 {
     font-size: 14px;
     color: $white;
     background: $primary;
-    cursor: pointer;
+    text-decoration: none;
   }
 }
 
@@ -53,6 +54,7 @@ h2 {
   max-width: 1440px;
   padding: 0 32px;
   margin: 0 auto;
+  overflow: hidden;
 }
 
 nav {
@@ -206,7 +208,7 @@ header {
       }
     }
 
-    @media screen and (max-width: 1252px) {
+    @media screen and (max-width: $laptop) {
       flex-wrap: wrap;
 
       .header__left {
@@ -223,6 +225,7 @@ header {
 
         p {
           padding-top: 20px;
+          line-height: unset;
         }
       }
 
@@ -254,6 +257,260 @@ header {
   }
 }
 
+main {
+  .project__section {
+    h2 {
+      font-size: min(44px, max(27px + 2vw));
+      font-weight: 400;
+      line-height: 60px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin: 195px 0px 41px 0px;
+      color: $black;
+    }
+
+    .project__about {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      p {
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 28px;
+        color: $firstGrey;
+        margin: 0px;
+      }
+
+      a {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        color: $white;
+        background: $primary;
+        text-decoration: none;
+        padding: 0 20px;
+      }
+    }
+
+    .project__first {
+      position: relative;
+
+      .project__first__headline {
+        width: 1376px;
+        height: 17px;
+        background: #1C1C1C;
+        margin-top: 62px;
+      }
+
+      .project__first__year {
+        position: absolute;
+        left: 1281px;
+        bottom: 88px;
+        color: $white;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 30px;
+      }
+
+      img {
+        display: block;
+      }
+    }
+
+    .project__second {
+      position: relative;
+
+      .project__second__headline {
+        width: 1376px;
+        height: 49px;
+        background: #EDE6D4;
+        margin-top: 24px;
+      }
+
+      .project__second__year {
+        position: absolute;
+        left: 1284px;
+        bottom: 48px;
+        color: $white;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 30px;
+      }
+
+      img {
+        display: block;
+      }
+    }
+
+    @media screen and (max-width: 1425px) {
+      .project__first, .project__second {
+        img {
+          width: 100%;
+        }
+
+        .project__first__headline, .project__second__headline {
+          width: 100%;
+        }
+      }
+    }
+
+    @media screen and (max-width: $laptop) {
+      h2 {
+        text-align: center;
+        margin: 30px 0px 10px 0px;
+      }
+
+      .project__about {
+        justify-content: unset;
+        flex-direction: column;
+
+        P {
+          margin-bottom: 20px;
+          text-align: center;
+          line-height: unset;
+        }
+      }
+
+      .project__first {
+        .project__first__headline {
+          margin-top: 30px;
+        }
+      }
+    }
+
+    @media screen and (max-width: 340px) {
+      h2 {
+        line-height: unset;
+      }
+    }
+  }
+
+  .about__section {
+    h2 {
+      font-weight: 400;
+      font-size: min(60px, max(33px + 2vw));
+      line-height: 72px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-top: 191px;
+      margin-bottom: 105px;
+    }
+
+    .about__content {
+      display: flex;
+      flex-direction: column;
+
+      .about__pics {
+        display: flex;
+        justify-content: flex-end;
+        position: relative;
+
+        img {
+          display: block;
+  
+          &:nth-child(2) {
+            position: absolute;
+            bottom: 48px;
+            right: 678px;
+          }
+        }
+      }
+
+      .about__text {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        margin-left: 336px;
+
+        p {
+          font-weight: 400;
+          font-size: 20px;
+          line-height: 30px;
+          color: $firstGrey;
+          
+          &:nth-child(1) {
+            margin: 131px 0px 30px 0px;
+          }
+
+          &:nth-child(2) {
+            margin: 0px;
+          }
+        }
+
+        a {
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 24px;
+          text-decoration: none;
+          color: $white;
+          background: $primary;
+          padding: 10px 34px 9px 34px;
+          width: fit-content;
+          margin-top: 73px;
+        }
+      }
+    }
+
+    @media screen and (max-width: $laptop) {
+      h2 {
+        text-align: center;
+        margin-top: 30px;
+        margin-bottom: 25px;
+      }
+
+      .about__content {
+        .about__pics {
+          justify-content: center;
+
+          img {
+            &:nth-child(2) {
+              display: none;
+            }
+          }
+        }
+
+        .about__text {
+          justify-content: center;
+          align-items:center;
+          margin: 0px auto;
+
+          p {
+            text-align: center;
+            &:nth-child(1) {
+              margin: 30px 0px 15px 0px;
+            }
+          }
+
+          a {
+            margin-top: 15px;
+          }
+        }
+      }
+    }
+
+    @media screen and (max-width: 864px) {
+      h2 {
+        line-height: unset;
+      }
+
+      .about__content {
+        .about__pics {
+          img {
+            width: 100%;
+          }
+        }
+
+        .about__text {
+          p {
+            line-height: unset;
+          }
+        }
+      }
+    }
+  }
+}
+
 //normalize css
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 
@@ -273,6 +530,10 @@ ul {
     margin: 0;
     padding: 0;
 }
+
+/* p {
+  margin: 0px;
+} */
 
  html {
     line-height: 1.15; /* 1 */
