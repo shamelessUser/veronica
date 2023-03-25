@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: "Inter-Regular";
   src: url(../fonts/Inter-Regular.ttf);
@@ -1084,4 +1085,25 @@ template {
    */
 [hidden] {
   display: none;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #eee; /*Цвет скролла*/
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 5px; /*Закругление ползунка*/
+  background-color: #ccc; /*Цвет ползунка*/
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: #aaa;
+}
+
+::-webkit-scrollbar {
+  width: 8px; /*Толщина скролла*/
+}
+
+* {
+  scrollbar-color: #ccc #eee; /*Цвет скролла, цвет ползунка*/
+  scrollbar-width: thin; /*Толщина скролла thin, auto*/
 }/*# sourceMappingURL=style.css.map */
